@@ -20,22 +20,82 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="bg-background-light text-text-main font-sans antialiased selection:bg-primary/20 selection:text-primary">
+<body
+    class="bg-background-light text-text-main font-sans antialiased selection:bg-primary/20 selection:text-primary overflow-x-hidden">
 
-    <nav class="w-full z-50 px-6 py-4 glass-nav border-b border-gray-100">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="block">
-                <img src="./logo.png" alt="Maison Malak Logo" class="h-10 w-auto">
+    <div class="block md:hidden text-text-main">
+        <nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 glass-nav flex justify-between items-center">
+            <div class="w-8"></div>
+            <a href="index.html" class="block z-50 absolute left-1/2 transform -translate-x-1/2">
+                <img src="./lovgo.png" alt="Maison Malak Logo" class="h-14 w-auto">
             </a>
-            <a href="index.html"
-                class="flex items-center gap-2 text-sm uppercase tracking-widest text-text-soft hover:text-primary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">arrow_back</span>
-                Retour à l'accueil
-            </a>
+            <button id="mobile-menu-btn" class="text-text-main z-50 p-2">
+                <span class="material-symbols-outlined text-3xl" id="menu-icon">menu_open</span>
+            </button>
+        </nav>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-[#FCFCFA] z-40 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500">
+
+            <div class="flex flex-col items-center gap-8 w-full px-6 mt-12">
+                <a class="text-3xl font-display text-text-main mobile-link tracking-wide"
+                    href="index.html#inspirations-mobile">Inspirations</a>
+                <a class="text-3xl font-display text-text-main mobile-link tracking-wide"
+                    href="index.html#atelier-mobile">La Cheffe</a>
+                <a class="text-3xl font-display text-text-main mobile-link tracking-wide"
+                    href="index.html#contact-mobile">Contact</a>
+
+                <div class="w-12 h-[1px] bg-primary/30 my-2"></div>
+
+                <a class="w-[80%] max-w-[280px] flex justify-center items-center gap-2 bg-text-main text-white px-8 py-4 rounded-full text-sm font-medium uppercase tracking-widest mobile-link shadow-xl"
+                    href="commande.html">
+                    Demander un devis
+                </a>
+            </div>
+
+            <div class="absolute bottom-12 flex gap-8 text-text-main">
+                <a href="#"
+                    class="text-[10px] uppercase tracking-[0.2em] font-medium hover:text-primary transition-colors">Instagram</a>
+                <a href="#"
+                    class="text-[10px] uppercase tracking-[0.2em] font-medium hover:text-primary transition-colors">Facebook</a>
+            </div>
         </div>
-    </nav>
+    </div>
 
-    <header class="pt-16 pb-12 text-center px-6">
+    <div class="hidden md:block text-text-main">
+        <nav
+            class="fixed top-0 left-0 w-full z-50 px-8 py-3 glass-nav border-b border-primary/10 transition-all duration-300">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+
+                <div class="w-1/4 flex justify-start">
+                    <a href="index.html" class="block z-50 relative transition-transform hover:scale-105 duration-300">
+                        <img src="./lovgo.png" alt="Maison Malak Logo" class="h-20 md:h-24 w-auto drop-shadow-sm">
+                    </a>
+                </div>
+
+                <div
+                    class="w-2/4 flex justify-center gap-14 text-xs uppercase tracking-[0.2em] font-medium text-text-soft">
+                    <a class="link-hover hover:text-text-main transition-colors"
+                        href="index.html#inspirations-pc">Inspirations</a>
+                    <a class="link-hover hover:text-text-main transition-colors" href="index.html#atelier-pc">La
+                        Cheffe</a>
+                    <a class="link-hover hover:text-text-main transition-colors"
+                        href="index.html#contact-pc">Contact</a>
+                </div>
+
+                <div class="w-1/4 flex justify-end">
+                    <a class="flex items-center gap-2 bg-text-main text-white px-7 py-3.5 rounded-full text-xs uppercase tracking-widest hover:bg-primary transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                        href="commande.html">
+                        Demander un devis
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+
+    <header class="pt-36 pb-12 text-center px-6">
         <span
             class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-medium uppercase tracking-widest mb-4">Sur
             Devis Uniquement</span>
@@ -52,7 +112,7 @@
         <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
 
             <div class="w-full lg:w-1/3 order-2 lg:order-1">
-                <div class="sticky top-24 bg-[#FCFCFA] border border-gray-100 p-8 rounded-[2rem] shadow-elegant">
+                <div class="sticky top-28 bg-[#FCFCFA] border border-gray-100 p-8 rounded-[2rem] shadow-elegant">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="material-symbols-outlined text-primary text-3xl">info</span>
                         <h2 class="text-2xl font-display font-medium">À savoir</h2>
@@ -76,7 +136,7 @@
                     </ul>
 
                     <div class="mt-10 pt-8 border-t border-gray-100 text-center">
-                        <img src="https://ui-avatars.com/api/?name=Malak&background=C5A059&color=fff&rounded=true"
+                        <img src="https://ui-avatars.com/api/?name=Malak&background=6B4E3B&color=fff&rounded=true"
                             alt="Maison Malak" class="w-16 h-16 rounded-full mx-auto mb-3">
                         <p class="font-display text-lg">La Maison Malak</p>
                         <p class="text-xs text-primary uppercase tracking-wider mt-1">Création Pâtissière</p>
@@ -144,7 +204,6 @@
                             souhaitées</h3>
                         <p class="text-sm text-text-soft mb-6 font-light">Indiquez les quantités pour les éléments que
                             vous souhaitez commander.</p>
-
                         <div class="space-y-4">
                             <div
                                 class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50/30">
@@ -155,7 +214,6 @@
                                 <input type="number" id="qty_cake" name="qty_cake" min="15" placeholder="0"
                                     class="w-32 rounded-lg border-gray-200 bg-white focus:border-primary focus:ring-primary text-center">
                             </div>
-
                             <div
                                 class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50/30">
                                 <div>
@@ -167,7 +225,6 @@
                                     placeholder="0"
                                     class="w-32 rounded-lg border-gray-200 bg-white focus:border-primary focus:ring-primary text-center">
                             </div>
-
                             <div
                                 class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50/30">
                                 <div>
@@ -192,7 +249,6 @@
                                     class="w-full rounded-xl border-gray-200 bg-gray-50/50 focus:border-primary focus:ring-primary px-4 py-3 transition-colors resize-none"
                                     placeholder="Décrivez votre projet ici..."></textarea>
                             </div>
-
                             <div>
                                 <label class="block text-sm font-medium text-text-main mb-2">Joindre des modèles /
                                     photos d'inspiration</label>
@@ -232,6 +288,102 @@
         </div>
     </main>
 
+
+    <div class="block md:hidden text-text-main">
+        <div class="py-12 px-6 bg-background-light text-center border-t border-gray-100" id="contact-mobile">
+            <img src="./lovgo.png" alt="Maison Malak Logo" class="h-12 w-auto mx-auto mb-6">
+            <div class="space-y-3 mb-8">
+                <p class="text-sm text-text-soft">128 Rue Saint-Honoré, Bruxelles</p>
+                <p class="text-sm text-text-soft">+32 485 45 67 89</p>
+            </div>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#"
+                    class="text-text-main text-xs uppercase tracking-widest font-medium hover:text-primary transition-colors">Instagram</a>
+                <a href="#"
+                    class="text-text-main text-xs uppercase tracking-widest font-medium hover:text-primary transition-colors">Facebook</a>
+            </div>
+            <p class="text-[10px] text-gray-400 uppercase tracking-widest">© 2026 Maison Malak.</p>
+        </div>
+    </div>
+
+    <div class="hidden md:block text-text-main">
+        <footer class="bg-surface-light border-t border-gray-100 pt-20 pb-10 px-6" id="contact-pc">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-3 gap-12 text-left mb-12">
+                    <div class="flex flex-col items-start">
+                        <a href="index.html" class="mb-4 block">
+                            <img src="./lovgo.png" alt="Maison Malak Logo" class="h-14 w-auto">
+                        </a>
+                        <p class="text-text-soft text-sm leading-relaxed max-w-[250px]">
+                            L'artisanat élevé au rang d'art. Des pâtisseries conçues sur-mesure pour émerveiller vos
+                            événements.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-display text-lg mb-4 text-text-main">Nous Trouver</h4>
+                        <ul class="text-text-soft text-sm space-y-3 font-light flex flex-col items-start">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                                128 Rue Saint-Honoré, Bruxelles
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[18px] text-primary">call</span>
+                                +32 485 45 67 89
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[18px] text-primary">mail</span>
+                                bonjour@maisonmalak.com
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-display text-lg mb-4 text-text-main">Horaires</h4>
+                        <ul class="text-text-soft text-sm space-y-3 font-light max-w-[200px]">
+                            <li class="flex justify-between border-b border-gray-100 pb-2">
+                                <span>Lun - Ven</span>
+                                <span class="font-medium text-text-main">08h00 - 19h00</span>
+                            </li>
+                            <li class="flex justify-between pt-1">
+                                <span>Sam - Dim</span>
+                                <span class="font-medium text-text-main">09h00 - 17h00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-row justify-between items-center pt-8 border-t border-gray-100 text-[10px] text-text-soft font-medium uppercase tracking-widest gap-4">
+                    <p>© 2026 Maison Malak.</p>
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-primary transition-colors">Instagram</a>
+                        <a href="#" class="hover:text-primary transition-colors">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        const links = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isClosed = menu.classList.contains('opacity-0');
+            if (isClosed) {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                icon.textContent = 'close';
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                icon.textContent = 'menu_open';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        btn.addEventListener('click', toggleMenu);
+        links.forEach(link => link.addEventListener('click', toggleMenu));
+    </script>
 </body>
 
 </html>

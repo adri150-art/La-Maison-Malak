@@ -3,13 +3,14 @@ tailwind.config = {
     theme: {
         extend: {
             colors: {
-                "primary": "#C5A059", /* Un or/cuivre plus riche et élégant */
-                "primary-hover": "#A68444",
-                "background-light": "#FCFCFA", /* Un blanc crème très subtil */
-                "background-dark": "#171512", /* Un noir chaud */
+                "primary": "#6B4E3B", /* Le marron principal du texte 'La Maison Malak' */
+                "primary-hover": "#523B2C", /* Version légèrement plus foncée pour le survol */
+                "secondary": "#D3C5B9", /* Le beige de la poche à douille en arrière-plan */
+                "background-light": "#FAF8F6", /* Un fond crème légèrement réchauffé */
+                "background-dark": "#1F1611", /* Un fond très sombre, teinté de marron */
                 "surface-light": "#FFFFFF",
-                "text-main": "#2C2A25", /* Anthracite chaud */
-                "text-soft": "#7A7568",
+                "text-main": "#3A2B20", /* Un marron très foncé pour le texte de lecture (plus doux que du noir pur) */
+                "text-soft": "#8A7363", /* Un marron grisé pour les textes secondaires */
             },
             fontFamily: {
                 "display": ["'Playfair Display'", "serif"],

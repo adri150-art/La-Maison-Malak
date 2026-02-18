@@ -24,16 +24,24 @@
 
     <div class="block md:hidden text-text-main bg-background-light min-h-screen">
 
-        <nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 glass-nav flex justify-between items-center">
-            <div class="w-8"></div>
+        <nav
+            class="fixed top-0 left-0 w-full z-50 px-5 py-3 bg-white/80 backdrop-blur-md border-b border-secondary/20 flex justify-between items-center transition-all duration-300 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
 
-            <a href="#" class="block z-50 absolute left-1/2 transform -translate-x-1/2">
-                <img src="./lovgo.png" alt="Maison Malak Logo" class="h-14 w-auto">
+            <button id="mobile-menu-btn"
+                class="text-text-main z-50 w-10 h-10 flex items-center justify-center rounded-full bg-secondary/10 shadow-sm border border-secondary/30 active:scale-90 transition-all">
+                <span class="material-symbols-outlined text-[22px]" id="menu-icon">menu</span>
+            </button>
+
+            <a href="index.html"
+                class="block z-50 absolute left-1/2 transform -translate-x-1/2 active:scale-95 transition-transform">
+                <img src="./lovgo.png" alt="Maison Malak Logo" class="h-12 w-auto drop-shadow-sm">
             </a>
 
-            <button id="mobile-menu-btn" class="text-text-main z-50 p-2">
-                <span class="material-symbols-outlined text-3xl" id="menu-icon">menu_open</span>
-            </button>
+            <a href="#"
+                class="text-text-main z-50 w-10 h-10 flex items-center justify-center rounded-full bg-secondary/10 shadow-sm border border-secondary/30 active:scale-90 transition-all">
+                <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+            </a>
+
         </nav>
 
         <div id="mobile-menu"
@@ -63,10 +71,10 @@
             </div>
         </div>
 
-        <div class="pt-36 px-6 pb-12 flex flex-col items-center text-center relative">
-            <span class="text-primary text-[10px] uppercase tracking-[0.2em] font-medium mb-4">Créations
-                Sur-Mesure</span>
-            <h1 class="text-5xl font-display font-medium leading-[1.1] text-text-main mb-6 relative z-10">
+        <div class="pt-28 px-6 pb-10 flex flex-col items-center text-center relative">
+            <span class="text-primary text-[10px] uppercase tracking-[0.2em] font-bold mb-3">Créations Sur-Mesure</span>
+
+            <h1 class="text-4xl sm:text-5xl font-display font-medium leading-[1.15] text-text-main mb-4 relative z-10">
                 La Pâtisserie <br>
                 <span class="italic text-primary">à votre image</span>
             </h1>
@@ -76,17 +84,17 @@
             </p>
 
             <a href="commande.html"
-                class="inline-flex items-center justify-center gap-3 bg-primary text-white px-6 py-4 rounded-2xl text-sm font-medium uppercase tracking-widest shadow-xl w-[90%] mb-12">
+                class="inline-flex items-center justify-center gap-3 bg-text-main text-white px-6 py-4 rounded-full text-xs font-medium uppercase tracking-widest shadow-xl w-[85%] mb-10 active:scale-95 transition-transform">
                 Demander un devis
-                <span class="material-symbols-outlined">east</span>
+                <span class="material-symbols-outlined text-[18px]">east</span>
             </a>
 
-            <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-elegant relative border-2 border-white">
+            <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl relative border-[3px] border-white">
                 <video src="video.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                <div class="absolute inset-0 bg-black/20"></div>
-                <div class="absolute bottom-3 left-0 right-0 text-center">
-                    <span class="text-white text-[10px] uppercase tracking-widest font-bold drop-shadow-md">Design 100%
-                        Personnalisé</span>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <div class="absolute bottom-4 left-0 right-0 text-center">
+                    <span class="text-white text-[9px] uppercase tracking-[0.2em] font-medium drop-shadow-md">Design
+                        100% Personnalisé</span>
                 </div>
             </div>
         </div>
@@ -168,7 +176,7 @@
             </div>
         </div>
 
-        <div class="py-16 px-6 bg-surface-light border-y border-gray-100" id="atelier-mobile">
+        <div class="py-16 px-6 bg-secondary/15 border-y border-secondary/20" id="atelier-mobile">
             <div class="flex flex-col items-center text-center">
                 <div class="relative mb-6">
                     <div class="absolute inset-0 border-2 border-primary rounded-full scale-110 opacity-30"></div>
@@ -437,7 +445,7 @@
                 document.body.style.overflow = 'hidden';
             } else {
                 menu.classList.add('opacity-0', 'pointer-events-none');
-                icon.textContent = 'menu_open';
+                icon.textContent = 'menu';
                 document.body.style.overflow = 'auto';
             }
         }
